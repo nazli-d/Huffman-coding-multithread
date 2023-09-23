@@ -4,6 +4,8 @@
 #include <map>
 
 using namespace std;
+
+
 struct Node {
     char c;
     int freq;
@@ -18,6 +20,7 @@ struct comp {
         return left->freq > right->freq;
     }
 };
+
 
 void encode( Node* root, string str, map<char, string>& huffmanCode) {
     if (!root)
