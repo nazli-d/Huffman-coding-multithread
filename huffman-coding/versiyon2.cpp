@@ -4,6 +4,8 @@
 #include <map>
 
 using namespace std;
+
+
 struct Node {
     char c;
     int freq;
@@ -35,6 +37,7 @@ static void encode(Node* root, string str, map<char, string>& huffmanCode) {
     encode(root->right, str + "1", huffmanCode);
 }
 
+
 void buildHuffman(string& inputFile,  string& outputFile) {
     ifstream inFile(inputFile, ios::in);  
     map<char, int> freq;
@@ -61,6 +64,7 @@ void buildHuffman(string& inputFile,  string& outputFile) {
         pq.push(newNode);
     }
 }
+    
     inFile.open(inputFile, ios::in);
 
     map<char, string> huffmanCode;
@@ -83,6 +87,7 @@ void buildHuffman(string& inputFile,  string& outputFile) {
 }
 
 int main() {
+    
     vector<string> inputFiles = { "input1.txt", "input2.txt", "input3.txt", "input4.txt", "input5.txt" };
     vector<string> outputFiles = { "output1.txt", "output2.txt", "output3.txt", "output4.txt", "output5.txt" };
 
