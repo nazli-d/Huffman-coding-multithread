@@ -1,6 +1,20 @@
 # Multithread Huffman Coding 
 Bu proje, Huffman algoritmasının farklı versiyonlarını kullanarak daha optimize hale getirme çabalarını içerir. Toplamda 8 farklı versiyon üzerinde çalışıldı.
 
+## Nasıl Çalıştırılır?
+
+Kodları derlemek için aşağıdaki komutu kullanabilirsiniz:
+
+```shell
+g++ -O3 -std=c++17 -lpthread versiyon1.cpp -o program
+```
+
+Derleme zamanındaki süreleri görmek için aşağıdaki komutu kullanabilirsiniz:
+```shell
+time ./program
+```
+
+
 ## Versiyonlar
 
 ### Versiyon 1
@@ -33,11 +47,7 @@ Versiyon 7, vektörizasyon işlemi için bazı değişiklikler yapar ve malloc k
 
 ### Versiyon 8
 
-Versiyon 8, daha fazla iş parçacığı kullanarak hızlandırmayı amaçlar, ancak bu değişiklikle segmentation fault hatası alır. Debug kullanarak hatayı giderir.
-
-
-
-
+Versiyon 8, daha fazla iş parçacığı kullanarak hızlandırmayı amaçlar.
 
 
 
