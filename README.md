@@ -15,6 +15,26 @@ Versiyon 2, Versiyon 1'deki while döngülerini optimize etmek için for döngü
 
 Versiyon 3, Versiyon 2'ye ek olarak her dosya için ayrı çalışan threadler kullanır. Ancak bu optimize edilmiş versiyon, daha fazla iş parçacığı kullanarak bazı işlemlerde beklenmedik yavaşlamalara neden olabilir.
 
+### Versiyon 4
+
+Versiyon 4, const ve constexpr kullanarak optimizasyon sağlar ve versiyon 3 ile kıyaslandığında 30 saniyelik hızlandırma elde eder.
+
+### Versiyon 5
+
+Versiyon 5, recursive fonksiyon kullanarak çalışır ve versiyon 4'e göre 3 saniyelik bir yavaşlama yaşar. Bu yavaşlama, rekürsif fonksiyonun derleme zamanında çözülemiyor olması, her çağrıda veri erişimi istemesi ve rekürsif mantığının karmaşık olmasından kaynaklanır.
+
+### Versiyon 6
+
+Versiyon 6, en çok zaman harcanan yerleri belirlemek için gprof çıktısını kullanır ve bottleneck'i bulur. Bu versiyonda map veri yapısını unordered map ve vector ile değiştirerek 2 saniyelik iyileşme sağlar.
+
+### Versiyon 7
+
+Versiyon 7, vektörizasyon işlemi için bazı değişiklikler yapar ve malloc kullanarak iyileştirmeler sağlar. Bu versiyon, 3 saniyelik iyileşme elde eder.
+
+### Versiyon 8
+
+Versiyon 8, daha fazla iş parçacığı kullanarak hızlandırmayı amaçlar, ancak bu değişiklikle segmentation fault hatası alır. Debug kullanarak hatayı giderir.
+
 
 
 
