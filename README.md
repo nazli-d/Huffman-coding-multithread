@@ -6,7 +6,7 @@ Bu proje, Huffman algoritmasının farklı versiyonlarını kullanarak daha opti
 Kodları derlemek için aşağıdaki komutu kullanabilirsiniz:
 
 ```shell
-g++ -O3 -std=c++17 -lpthread versiyon1.cpp -o program
+g++ -O3 -std=c++17 -lpthread -pthread versiyon1.cpp -o program
 ```
 
 Derleme zamanındaki süreleri görmek için aşağıdaki komutu kullanabilirsiniz:
